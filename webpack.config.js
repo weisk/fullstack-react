@@ -7,7 +7,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.js/,
-                loader: 'babel',
+                loader: 'babel?plugins=babel-plugin-rewire',
                 exclude: /node_modules/
             }
         ]
