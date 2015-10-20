@@ -16,10 +16,9 @@ The app constructed here is simple - a list of names, maintained on the server, 
 ## TODO
 
 - ~~ability to edit existing names~~
-    - Completed by [Sam Kvale] in the [edit-names] branch.
+    - Completed by [Sam Kvale][skvale] in the [edit-names] branch.
 - support for name re-ordering
 - blog post explaining all parts of this demo
 
 
-[edit-names]: https://github.com/Widen/fullstack-react/tree/edit-names
 [skvale]: https://github.com/skvale
