@@ -21,4 +21,5 @@ The app constructed here is simple - a list of names, maintained on the server, 
 - blog post explaining all parts of this demo
 
 
+[edit-names]: https://github.com/Widen/fullstack-react/tree/edit-names
 [skvale]: https://github.com/skvale
