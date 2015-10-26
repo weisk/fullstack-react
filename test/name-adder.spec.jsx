@@ -9,14 +9,14 @@ describe('name-adder tests', () => {
         var model = jasmine.createSpyObj('model', ['call']),
             onNameAdded = () => {},
             nameAdder = TestUtils.renderIntoDocument(<NameAdder onAdded={onNameAdded}/>),
-            button = TestUtils.findRenderedDOMComponentWithTag(nameAdder, 'button'),
+            form = TestUtils.findRenderedDOMComponentWithTag(nameAdder, 'form'),
             input = nameAdder.refs.input
 
         NameAdder.__Rewire__('model', model)
         model.call.and.returnValue({then: (success) => success()})
 
         input.value = 'new name'
-        button.click()
+        TestUtils.Simulate.submit(form)
 
         expect(model.call).toHaveBeenCalledWith(['names', 'add'], ['new name'], ['name'])
     })
