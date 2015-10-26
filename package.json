@@ -27,6 +27,7 @@
     "webpack": "1.12.2"
   },
   "scripts": {
+    "test": "karma start test/karma.conf.js",
     "webpack": "webpack -w"
   }
 }

@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './name-manager.jsx',
+    entry: './index.jsx',
     output: {
         filename: './site/bundle.js'
     },
