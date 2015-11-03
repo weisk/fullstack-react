@@ -1,5 +1,4 @@
 var React = require('react'),
-    ReactDom = require('react-dom'),
     TestUtils = require('react/lib/ReactTestUtils'),
     NamesList = require('../names-list.jsx'),
     Falcor = require('falcor')
