@@ -4,9 +4,9 @@ var webdriverio = require('webdriverio'),
 if (process.env.CI) {
     options = {
         desiredCapabilities: {
-            browserName: process.env.BROWSER,
-            version: process.env.VERSION,
-            platform: process.env.PLATFORM
+            browserName: process.env.BROWSER.replace(/_/g,' '),
+            version: process.env.VERSION.replace(/_/g,' '),
+            platform: process.env.PLATFORM.replace(/_/g,' ')
         },
         host: 'ondemand.saucelabs.com',
         port: 80,
