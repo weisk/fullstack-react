@@ -16,8 +16,5 @@ env:
     PLATFORM: Linux
     VERSION: 43
   - BROWSER: safari
-    PLATFORM: OS_X_10.10
-    VERSION: 8.0
-  - BROWSER: safari
     PLATFORM: OS_X_10.11
     VERSION: 9.0
