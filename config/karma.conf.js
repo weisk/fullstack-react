@@ -1,3 +1,6 @@
+var webpackConfig = require('./webpack.config')
+webpackConfig.module.loaders[0].query = {plugins: ['babel-plugin-rewire']}
+
 module.exports = function (config) {
     config.set({
         basePath: '../',
@@ -18,7 +21,7 @@ module.exports = function (config) {
         },
         reporters: ['spec'],
         singleRun: true,
-        webpack: require('./webpack.config'),
+        webpack: webpackConfig,
         webpackMiddleware: {noInfo: true}
     });
 };
