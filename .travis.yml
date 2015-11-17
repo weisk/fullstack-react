@@ -2,11 +2,11 @@ language: node_js
 node_js:
 - '5.0'
 before_script:
+- npm run server &
 - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
 - unzip BrowserStackLocal-linux-x64.zip
 - ./BrowserStackLocal $BROWSERSTACK_KEY &
-- sleep 5
-- npm run server &
+- sleep 10
 env:
   global:
   - secure: IKsVq7xmRs/1pJZ/pB3tbOITtbtcBFlBh3IIuhGkh72y0v8PTFfP/r/zlT/Gq5seAIaXN+YnbDPA61qroxGAGJdrsAB0xVae+AWRmBbHV64mq4g3kkj4RJPjv/2rAsTHEBpXPpmHdpjEDFIEqwTKWehZpJZAjLFoRS7LV5ucRc2LBNpfP3J83AJWn3KpBVnw5SBcwUbY8O8vKcaaYyfeorjMXqZ84Rw9jlDyhR8HJmRrvA/FVadg2lpzabFmQ5gBkLFzxEKghvIRkAJDQ1LMjYBmA6aogiJZoH90InRb6ub4KUrrmnYdbn0ug8YxDYXDa34fsBBnipUAYwSnwGujJmHHQ3rbcS12/S+cs75uFowBLP2ej6toznyUIwhfMX9rBFY6salo3jW3Qj7Qyy+68C3aqPLkJLCEgFHN2dGLR4BEoguycxSDoeIc5vj6j3c8uH/pP1Vp1jIRuaDglfyraIiwcZL5l4zznlnaqCOvTG6hJKZHgz1MCxaaCQjCdsKtMjFnmz8aocxmJbW+0BazAhEbbPvUsagKrq0K91bmXKWaplvuo1jhqWOIlkW3L6eNX5880or+BergkjXufnZFLm6soaBdP1/aRN1fBgDPRuPcEh+gHbiSa3A1Y3Fsrx+eAz8mnkyqoXlAvQTPq8XBkIoUyoYWtzWpDp3CAVPGJmg=
