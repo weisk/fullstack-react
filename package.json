@@ -38,6 +38,6 @@
     "test-integration": "node server/test/integration",
     "test-server": "jasmine JASMINE_CONFIG_PATH=config/jasmine.json",
     "test": "npm run test-client; npm run test-server",
-    "webpack": "webpack -w --config config/webpack.config.js"
+    "webpack": "webpack --config config/webpack.config.js"
   }
 }
