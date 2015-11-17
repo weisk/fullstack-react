@@ -29,7 +29,7 @@ describe('name adder integration tests', () => {
         var date = Date.now(),
             nameCount
 
-        this.browser.url('http://localhost:9090')
+        this.browser.url('http://127.0.0.1:9090')
             .waitForExist('li', 30000)
             .elements('li').then(elements => nameCount = elements.value.length)
             .setValue('input', date)
