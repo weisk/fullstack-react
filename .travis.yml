@@ -4,7 +4,7 @@ node_js:
 before_script:
 - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
 - unzip BrowserStackLocal-linux-x64.zip
-- ./BrowserStackLocal $BROWSERSTACK_KEY &
+- ./BrowserStackLocal $BROWSERSTACK_KEY localhost,9090 > &
 - sleep 5
 - npm run server &
 env:
