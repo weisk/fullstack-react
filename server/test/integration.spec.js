@@ -4,14 +4,15 @@ var webdriverio = require('webdriverio'),
 if (process.env.CI) {
     options = {
         desiredCapabilities: {
-            browserName: process.env.BROWSER.replace(/_/g,' '),
-            version: process.env.VERSION.replace(/_/g,' '),
-            platform: process.env.PLATFORM.replace(/_/g,' ')
+            browserName: process.env.BROWSER,
+            version: process.env.VERSION,
+            platform: process.env.PLATFORM,
+            "browserstack.local": true
         },
-        host: 'ondemand.saucelabs.com',
+        host: 'hub.browserstack.com',
         port: 80,
-        user: process.env.SAUCE_USERNAME,
-        key: process.env.SAUCE_ACCESS_KEY
+        user: process.env.BROWSERSTACK_USERNAME,
+        key: process.env.BROWSERSTACK_KEY
     }
 }
 

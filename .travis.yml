@@ -1,20 +1,23 @@
 language: node_js
 node_js:
 - '5.0'
-addons:
-  sauce_connect: true
-before_script: npm run server &
+before_script:
+- wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
+- unzip BrowserStackLocal-linux-x64.zip
+- ./BrowserStackLocal $BROWSERSTACK_KEY &
+- sleep 5
+- npm run server &
 env:
-  global:
-  - secure: ub+BqUgFQ5kscJ2DlWKv5wanVNH7CvLm3+1iUDo5la3WC7Z2GPkfhYgJ6HCTJ3evKohga0SCUw6tO/ii9vKKGvGzHNiHpksBeJpeS0ajt7siU3x+mugbeWXcvOX4r59RZYrqBe1dx99iT7hho+NPjZ8NpIHvQiHEu37liqgjecpRiS7G5Bpq6abJYxaIDHYKNtk8LaQsNexyT81j9dRD5oXg4kb5MMatzagXASttge+Vzw5MioFTSsqkRwzKhrKk10q4KZ2lYJ0tuPtnTAx5GHHF6sft4iraw1mXVnJlV54Gp71Xt6WQP2DseKg2Kv0YsTiF15PsaE6YtLwGKzaC8sgpd0spw9q5YqBm2jsR/mJNde9y1TJE91FDS2G8RsGFF7TDbf9kkoQZM0Fb05MZnBploTwLYXNSPb5VzwmDGgy3ta05Fu45y3optPQdfgH3LBOwWlkMfDarMh5gp/AVasF8+/B4TuFI0l/ImSEgHPk9HVWMYpOabLn59IJCHxs7oTOdQ8S0Y5PFqz38UApzdHTmVUPQ6/4SnxF5bLJZ13ovVBJmgXQxo2EQaC2dK4XncTWQRXGOk63JY4vxA6mv5o+A+wZEW9qnvn068EOw3GzpxuBxxcXOKLz/J0RlYUYtAwBXpMI8kCBKhsZdy2xWt2Mgd1b5yVyvHfAzo8mNk/k=
-  - secure: FJshK4Vm8CwQ7t/QMTLIXY9/DbfuaQ3UJPE3H4DF7UWGr4fVBsfpI47xOKr6z2c6LI9x55TWgseRf8FiKK5mq6jdLrZa9jItP7ENDEA4EYS9K0kR4NTtUVs29dH/7w5IS2tHbgyldw/BUbRhzYE2qbKcqD+/IGOtrU3F4VabT57c4W2/r8Kpcmh5wY3qBK1Nnfv0CCQY+5fWc/wizl3YNXri3D87MnulUwLvSsnOj6pAu/dGsgIvBLXQHRS7aqSM1IuEndMPv/Yas/Ga/yiyYGLr0dRSCVwjcnLMuK+vueeZ33qH4DljMfsgpNKsd+BP3yASGmu7nuJNPv4B37uU308IDaFO9mh/dQvMjo4xNtBklCKEIroQ8OMUCISJuaKv/nnMr1VxECAAciice3fv8PXndVtLetxpSxE1My8epodfksIsMOacZXvwHRXrdoZUbAY+zzDTxC9XV1e3EjWlUsLXqsLI4AAmc/C23ACaBzU0G/GC19MxtUre2BC0ByO2XK/asjcdKnG4Rju3cWLVBJtJI4iKdi8aSoQMOl9Ex6QecMs/UEyozNADhHYLKZdG+bl/SIGWw8swF1rWND0Pkzk1cB3mlOXFyZyBHh9rurTzSN5r9Oyuy6tph85M+bCSAyLxWgJyOnzUgyb8C4UZ8njKImLCo8frYXtjYNBFuIU=
   matrix:
-  - BROWSER: firefox
-    PLATFORM: Windows_8
+  - BROWSER: Firefox
+    PLATFORM: Win8
     VERSION: 41
-  - BROWSER: chrome
-    PLATFORM: Linux
-    VERSION: 43
-  - BROWSER: safari
-    PLATFORM: OS_X_10.11
-    VERSION: 9.0
+  - BROWSER: Chrome
+    PLATFORM: Win8
+    VERSION: 46
+  - BROWSER: Safari
+    PLATFORM: Mac
+    VERSION: 9
+  global:
+  - secure: KyHuj2zzEPfNQ3CgaMXv8t3fpxvp+AWFfKcvYHDDH4DnJwj9oVK/XLzPsGbCUIJuyXXMrqbkvp7TpNuGJcAuo2yI0e58yG5Y8sbh7oHUGTjfI7grKypRt7e+MWakNOLETxmv6bH2oSTegZRlLvsoXWyYoigHtJw3u8n+tWAXTFXxCBVzgHphTha5fJBJ5fCDRkvPOf/mZzRJ1LneJiYOyy2vRu+SC/hFImJcfCzVb8iwKcU1oPCHlnXbYEwlTHBA61eUJLqRMNIwdOUW4jDYO8G8ycPqla9DDNoL0sdPhvkSXFDFi5Eo46uQMHa0L62DPLTxezVlf6gafJWVc7PWf7L7TeLe6GO7d2vKjLzcU+0ZKxTypRRrUJFrY0Zr2CsJWRy71MBaj4yoPsqDGVPKuIZS9j0MVCsPWYidq05WmY6wEAZYLCWF31qqwv+fHwtc3pKjaDKTy72s/swEjyLRkG5hXGnF+XpePBB7fOkYZr+yzISCDFCUoVmI96CniV4wRoqnPnHHPBBPoL0YULFdsPF2cbM628Ur+h8kO5sgpn7HtAalJHqzxiay6kzess5jw+FqnR3386QzmejjO7c6OhUH8nvOGmkDuQKNfd5Z74kDTg1c4bSHu//UA0jv1MSOWPnGl58nmbDU8Em2O2ZqdKUFB02YrOcRnErYbfMhJLs=
+  - secure: Xr2QU/zQmA+on4TdN2Fbi+xwLgZxPGk8Kv8XzsaT6NDYMFcqEilgL0xfu/SUxRhdGH7WcemsnXuMUI6uMkvczLfZ7UkmC9i/8j3fNRMzvEjN3khqlATEjZjoQS+xsx0mLMoBDrO+GOxs3dnF5Lzg0Y9injLHK44ZpPlgPprMOBcxAOPIBN8nCHVLtFb6TqSQi/HLZH5hTLb5AucPKLkmeCwkOsFhr3DoLmI6HH5wzQOL3wkrIeneOAzcvof8pDxIzF1VXWwqjaa9Fva1WYKf1YBeG8ipDGUf3CTFXlGFusW3IFUUGwVdvWCT4/hnG3sXmGxafH1Mt4RmkeVZ8jXqZc44VCU+F01qXr7PAr/FbvAUVX8d7RHd+VPgkMdku4pMdlToNnmblaZ8mUyBfgSSEWkoQ5i0PldbnS91cdTpWVDAJlyEUuYKr5sLsaXJIEHscyQOxg1r3GRRRlyYBCsBZjbESDkCKas3AWo8sRtIIcqE2frZXgRz+V9Uuq2OWi6Cz32FdveV6pNkj/MEpbBlSopIPonEtEc0gmHfDSM1FIgUwtJO7ASNt2BtzapkmjM9hAdVw2vMGUnSx9JEWGC5AbyyogG9Aqglx1as7jGdNrNuZfIg+IKHb+/mQBY6YcZUnGtcUYeroEKYCdTLYJscR74mFH/8q+Rqha1lIL1Dvbs=
