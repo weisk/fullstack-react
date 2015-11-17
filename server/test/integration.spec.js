@@ -7,6 +7,8 @@ if (process.env.CI) {
             browserName: process.env.BROWSER,
             version: process.env.VERSION,
             platform: process.env.PLATFORM,
+            build: 'Travis',
+            name: process.env['TRAVIS_BUILD_NUMBER'] || '',
             "browserstack.local": true
         },
         host: 'hub.browserstack.com',
