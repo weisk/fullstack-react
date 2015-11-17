@@ -16,9 +16,9 @@ env:
   - BROWSER: Firefox
     PLATFORM: Win8
     VERSION: 41
-  - BROWSER: Chrome
-    PLATFORM: Win8
-    VERSION: 46
-  - BROWSER: Safari
-    PLATFORM: Mac
-    VERSION: 9
+#  - BROWSER: Chrome
+#    PLATFORM: Win8
+#    VERSION: 46
+#  - BROWSER: Safari
+#    PLATFORM: Mac
+#    VERSION: 9
