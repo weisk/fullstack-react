@@ -28,7 +28,7 @@ describe('name adder integration tests', () => {
             nameCount
 
         this.browser.url('http://localhost:9090')
-            .waitForExist('li', 5000)
+            .waitForExist('li', 30000)
             .elements('li').then(elements => nameCount = elements.value.length)
             .setValue('input', date)
             .getValue('input').then(value => expect(parseInt(value)).toBe(date))
