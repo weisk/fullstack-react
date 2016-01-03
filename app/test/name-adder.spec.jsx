@@ -4,7 +4,7 @@ var React = require('react'),
     Falcor = require('falcor'),
     TestUtils = require('react/lib/ReactTestUtils')
 
-describe('name-adder tests', () => {
+describe('NameAdder', () => {
     it('saves new messages', () => {
         var model = jasmine.createSpyObj('model', ['call']),
             onNameAdded = () => {},
