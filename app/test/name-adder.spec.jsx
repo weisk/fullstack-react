@@ -1,8 +1,8 @@
 var React = require('react'),
     ReactDom = require('react-dom'),
-    TestUtils = require('react/lib/ReactTestUtils'),
     NameAdder = require('../name-adder.jsx'),
-    Falcor = require('falcor')
+    Falcor = require('falcor'),
+    TestUtils = require('react/lib/ReactTestUtils')
 
 describe('name-adder tests', () => {
     it('saves new messages', () => {
