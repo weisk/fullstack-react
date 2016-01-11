@@ -13,8 +13,15 @@ The app constructed here is simple - a list of names, maintained on the server, 
 4. Navigate to http://localhost:9090
 
 
-## Coming Soon
+## TODO
 
-- ability to edit existing names
-- support for name re-ordering
-- blog post explaining all parts of this demo
+- ~~ability to edit existing names~~
+    - Completed by [Sam Kvale][skvale] in the [edit-names] branch.
+- ~~support for name re-ordering~~
+    - Completed by [Jerome Cirrios][jerome-cirrios] in the [name-reordering] branch.
+
+
+[edit-names]: https://github.com/Widen/fullstack-react/tree/edit-names
+[jerome-cirrios]: https://github.com/jerome-cirrios
+[name-reordering]: https://github.com/Widen/fullstack-react/tree/name-reordering
+[skvale]: https://github.com/skvale
