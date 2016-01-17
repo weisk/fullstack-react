@@ -3,7 +3,7 @@ var React = require('react'),
     NamesList = require('../names-list.jsx'),
     Falcor = require('falcor')
 
-describe('names-list tests', () => {
+describe('NamesList', () => {
     afterEach(() => NamesList.__ResetDependency__('model'))
 
     it('renders with some initial data', (done) => {
