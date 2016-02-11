@@ -1,4 +1,5 @@
 var React = require('react'),
+    Falcor = require('falcor'),
     model = require('./model.js');
 
 class NamesList extends React.Component {
@@ -12,7 +13,7 @@ class NamesList extends React.Component {
     }
 
     render() {
-        var names = Object.keys(this.state.names).map(idx => {
+        var names = Falcor.keys(this.state.names).map(idx => {
             return <li key={idx}>{this.state.names[idx].name}</li>
         })
         return (
