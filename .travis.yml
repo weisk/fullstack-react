@@ -3,7 +3,7 @@ node_js:
 - '5.0'
 before_script:
 - npm run webpack
-- npm run server &
+- npm start &
 - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
 - unzip BrowserStackLocal-linux-x64.zip
 - ./BrowserStackLocal $BROWSERSTACK_KEY &
