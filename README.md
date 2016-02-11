@@ -12,13 +12,11 @@ Two articles cover the creation of this app:
 
 ## Starting the app  
 
-1. `npm install`
-2. `npm run webpack`
-3. `npm start`
-4. Navigate to http://localhost:9090
+1. `npm start`
+2. Navigate to http://localhost:9090
 
 ## Running unit and integration tests locally
-1. First 3 steps from "Starting the app"
+1. `npm start`
 2. `npm run setup-webdriver` (you only have to run this once)
 3. `npm run start-webdriver`
 4. `npm test`
