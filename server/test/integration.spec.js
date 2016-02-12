@@ -7,7 +7,8 @@ if (process.env.CI) {
             browserName: process.env.BROWSER,
             version: process.env.VERSION,
             platform: process.env.PLATFORM,
-            "browserstack.local": true
+            "browserstack.local": true,
+            "tunnel-identifier": process.env.TRAVIS_JOB_NUMBER
         },
         host: 'hub.browserstack.com',
         port: 80,
