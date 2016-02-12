@@ -35,7 +35,7 @@
     "webpack": "1.12.13"
   },
   "scripts": {
-    "start": "npm install; npm run webpack; node server/server",
+    "start": "npm install; npm run webpack; node server",
     "setup-webdriver": "(mkdir server/test/bin; cd server/test/bin; curl -O http://selenium-release.storage.googleapis.com/2.51/selenium-server-standalone-2.51.0.jar server/test)",
     "start-webdriver": "java -jar server/test/bin/selenium-server-standalone-2.51.0.jar",
     "test-client": "karma start config/karma.conf.js",
