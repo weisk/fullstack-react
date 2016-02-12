@@ -11,7 +11,6 @@ Two articles cover the creation of this app:
 
 
 ## Starting the app  
-
 1. `npm start`
 2. Navigate to http://localhost:9090
 
