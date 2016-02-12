@@ -42,6 +42,8 @@ describe('falcor router tests', () => {
     })
 
     it('adds a new name', (done) => {
+        var namesStore = Router.__get__('names')
+
         namesRouter.call(['names', 'add'], ['cuatro'], ['name']).
         subscribeOnNext((response) => {
             expect(response).toEqual({
@@ -54,17 +56,8 @@ describe('falcor router tests', () => {
                 paths: [['names', 'length'], ['names', 3, 'name']]
             })
 
-            namesRouter.get([['names', [3], 'name']]).
-            subscribeOnNext(response => {
-                expect(response).toEqual({
-                    jsonGraph: {
-                        names: {
-                            3: {name: 'cuatro'}
-                        }
-                    }
-                })
-                done()
-            })
+            expect(namesStore[3].name).toBe('cuatro')
+            done()
         })
     })
 })
