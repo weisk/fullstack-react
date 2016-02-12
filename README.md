@@ -1,5 +1,4 @@
 # fullstack-react
-======================
 [![Build Status](https://travis-ci.org/Widen/fullstack-react.svg?branch=master)](https://travis-ci.org/Widen/fullstack-react)
 
 A simple, full-stack JavaScript single page app featuring [React](http://facebook.github.io/react/),
