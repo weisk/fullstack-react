@@ -1,9 +1,8 @@
 var React = require('react'),
-    ReactDom = require('react-dom'),
     NameAdder = require('./name-adder.jsx'),
     NamesList = require('./names-list.jsx');
 
-class NameManager extends React.Component {
+module.exports = class extends React.Component {
     handleNameAdded() {
         this.refs.namesList.update()
     }
@@ -17,5 +16,3 @@ class NameManager extends React.Component {
         )
     }
 }
-
-ReactDom.render(<NameManager/>, document.querySelector('#demo'))

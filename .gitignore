@@ -1,3 +1,6 @@
+.DS_Store
 .idea
+BrowserStackLocal*
 node_modules
-site
+server/test/bin
+site/bundle*
